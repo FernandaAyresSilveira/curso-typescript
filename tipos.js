@@ -50,7 +50,39 @@ function falha() {
 }
 //ter umtipo ou outros tipos
 //Union Types
+var nota = 5;
 function exibirNota(nota) {
     console.log("A nota \u00E9 " + nota);
 }
 exibirNota('10');
+//type Funcionarios = Array<string>;
+var funcionarios = Funcionario = [{
+        nome: 'Vitor',
+        sobrenome: 'Farias',
+        dataNascimento: new Date()
+    }, {
+        nome: "Fulano",
+        sobrenome: 'Farias',
+        dataNascimento: new Date()
+    }];
+function tratarFuncionarios(funcionarios) {
+    // ...
+    for (var _i = 0, fncionarios_1 = fncionarios; _i < fncionarios_1.length; _i++) {
+        var funcionario = fncionarios_1[_i];
+        console.log('Nome do funcionário: ', funcionario.nome);
+    }
+}
+var altura = 1.6;
+altura = null;
+var contato = {
+    nome: "vitor",
+    telefone1: '1234567895',
+    telefone2: '5454571114'
+};
+//Type Assertion
+var minhaIdade = 23;
+minhaIdade.toString();
+//(<number>minhaIdade).toString();
+//const input = document.getElementById('numero1') as HTMLInputElement;
+//const input = <HTMLInputElement>document.getElementById('numero1');
+//console.log('input.value');
