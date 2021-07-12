@@ -14,3 +14,4 @@ function getUser(): Usuario{
 function setUser(usuario: Usuario){
     //..
 }
+
