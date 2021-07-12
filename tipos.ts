@@ -62,3 +62,39 @@ function erro (mensagem: srting){
 function falha(){
     return erro('Algo falhou');
 }
+
+
+//ter umtipo ou outros tipos
+//Union Types
+const nota : string | number = 5;
+function exibirNota(nota:number | string | boolean){
+    console.log(`A nota é ${nota}`);
+}
+
+exibirNota('10');
+
+//Alias
+type Funcionario = {
+    nome: string;
+    sobrenome:string;
+    dataNascimento: Date;
+
+}
+//type Funcionarios = Array<string>;
+const funcionarios = Funcionario = [{
+    nome: 'Vitor',
+    sobrenome: 'Farias',
+    dataNascimento: new Date()
+},{
+    nome: "Fulano",
+    sobrenome: 'Farias',
+    dataNascimento: new Date()
+}];
+
+function tratarFuncionarios(funcionarios: Funcionario[]){
+    // ...
+    for(let funcionario of fncionarios){
+        console.log('Nome do funcionário: ',funcionario.nome);
+    }
+}
+
