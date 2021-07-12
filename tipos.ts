@@ -98,3 +98,18 @@ function tratarFuncionarios(funcionarios: Funcionario[]){
     }
 }
 
+let altura: number | null = 1.6 ;
+altura = null;
+
+type Contato = {
+    nome: string;
+    telefone1: string;
+    telefone2?: string | null;
+}
+const contato : Contato = {
+    nome: "vitor",
+    telefone1: '1234567895',
+    telefone2: '5454571114'
+}
+
+
