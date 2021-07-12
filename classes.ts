@@ -18,20 +18,26 @@ const data2 = new Data(1,1);
 
 class Carro{
     private velocidadeAtual: number = 0;
-    constructor{
-        public marca: string;
-        public modelo: string;
-        private velocidadeMaxima: number = 220;
-    }
-    alteraVelocidade(delta:number){
-        this.velocidadeAtual;
+    constructor(
+        public marca: string,
+        public modelo: string,
+        private velocidadeMaxima: number = 220
+    ){}
+    private alteraVelocidade(delta:number){
+        const novaVelocidade = this.velocidadeAtual + delta;
+
+        if(novaVelocidade>=0 && novaVelocidade <= this.velocidadeMaxima){
+            this.velocidadeAtual= novaVelocidade;
+        }else{
+            this.velocidadeAtual = delta > 0 ? velocidadeMaxima : 0;
+        }
     }
 
     acelerar(){
-        this.alterarVelocidade(5);
+        this.alteraVelocidade(5);
     }
     frear(){
-        this.alterarVelocidade(-5);
+        this.alteraVelocidade(-5);
 
     }
 
